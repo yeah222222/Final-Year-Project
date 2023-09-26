@@ -20,7 +20,7 @@ class wholemodel(nn.Module):
         #concate the out1_img_fea_flat
         
         output=torch.cat((output,deltac),axis=1) #524291,
-        output=self.fc1(output)#这个数也太扯淡了 zjc 。。。
+        output=self.fc1(output)
         #print(output)
         output=output.view(output.size(0),16,16,16)#batchsize,16,16,16
         output=self.cnn2(output)
